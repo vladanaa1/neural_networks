@@ -5,7 +5,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-/*DOWNLOAD DATA FROM: https://www.kaggle.com/datasets/morph1max/definition-of-cargo-transportation?resource=download-directory*/
+# DOWNLOAD DATA FROM: https://www.kaggle.com/datasets/morph1max/definition-of-cargo-transportation?resource=download-directory
 
 main_path = './podaciCas06/'
 folder_paths = [
