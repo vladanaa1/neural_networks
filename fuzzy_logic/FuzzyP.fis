@@ -1,0 +1,33 @@
+[System]
+Name='FuzzyP'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='input1'
+Range=[-1 1]
+NumMFs=3
+MF1='neg':'trimf',[-2 -1 0]
+MF2='nula':'trimf',[-1 0 1]
+MF3='poz':'trimf',[0 1 2]
+
+[Output1]
+Name='output1'
+Range=[-1 1]
+NumMFs=3
+MF1='nula':'constant',[0]
+MF2='poz':'constant',[1]
+MF3='neg':'constant',[-1]
+
+[Rules]
+1, 3 (1) : 1
+2, 1 (1) : 1
+3, 2 (1) : 1

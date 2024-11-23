@@ -1,0 +1,42 @@
+[System]
+Name='FuzzyPDnonlinear'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='e'
+Range=[-1 1]
+NumMFs=2
+MF1='negativna':'zmf',[-1 1]
+MF2='pozitivna':'smf',[-1 1]
+
+[Input2]
+Name='de'
+Range=[-1 1]
+NumMFs=2
+MF1='negativna':'zmf',[-1 1]
+MF2='pozitivna':'smf',[-1 1]
+
+[Output1]
+Name='upravljanje'
+Range=[-2 2]
+NumMFs=5
+MF1='neg':'constant',[-1]
+MF2='nula':'constant',[0]
+MF3='poz':'constant',[1]
+MF4='velikoNeg':'constant',[-2]
+MF5='velikoPoz':'constant',[2]
+
+[Rules]
+1 1, 4 (1) : 1
+1 2, 2 (1) : 1
+2 1, 2 (1) : 1
+2 2, 5 (1) : 1
